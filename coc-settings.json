@@ -1,0 +1,21 @@
+{
+  "coc.preferences.useQuickfixForLocations": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextPrefix": " ",
+  "diagnostic.virtualTextLimitInOneLine": 1,
+  "rpc.enabled": false,
+  "rpc.checkIdle": false,
+  "rpc.detailsEditing": "stacking neutral creeps",
+  "rpc.lowerDetailsEditing": "LH / DN : {current_line} / {total_lines}",
+  "rpc.detailsViewing": "Top Lane, Position 4",
+  "rpc.lowerDetailsViewing": "LH / DN : {current_line} / {total_lines}",
+  "rpc.largeImage": "{LANG}",
+  "rpc.showProblems": false,
+  "rpc.buttonEnabled": false,
+  "rpc.workspaceElapsedTime": true,
+  "rpc.suppressNotifications": false,
+  "rpc.idleTimeout": 500,
+  "rpc.idleText": "Ganking Mid Lane",
+  "rpc.smallImage": "Dota 6.67b"
+}
