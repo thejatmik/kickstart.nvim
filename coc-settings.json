@@ -4,6 +4,7 @@
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualTextPrefix": " ",
   "diagnostic.virtualTextLimitInOneLine": 1,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "rpc.enabled": true,
   "rpc.checkIdle": true,
   "rpc.detailsEditing": "stacking neutral creeps",
