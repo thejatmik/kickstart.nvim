@@ -591,6 +591,11 @@ require('lazy').setup({
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+
+      local gd_port = os.getenv 'GDScript_Port' or 6005
+      local gd_cmd = vim.lsp.rpc.connect('127.0.0.1', tonumber(gd_port))
+      vim.lsp.enable 'gdscript'
+
       local servers = {
         -- clangd = {},
         -- gopls = {},
@@ -618,6 +623,14 @@ require('lazy').setup({
               -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
+        },
+
+        -- godot
+        -- 20260124 naming as 'gdscript' shows error package not found in mason-registry
+        gdtoolkit = {
+          cmd = gd_cmd,
+          filetypes = { 'gd', 'gdscript', 'gdscript3' },
+          root_markers = { 'project.godot', '.git' },
         },
       }
 
@@ -865,7 +878,21 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      -- treesitter parsers
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'gdscript',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
