@@ -592,9 +592,9 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
-      local gd_port = os.getenv 'GDScript_Port' or 6005
-      local gd_cmd = vim.lsp.rpc.connect('127.0.0.1', tonumber(gd_port))
-      vim.lsp.enable 'gdscript'
+      -- local gd_port = os.getenv 'GDScript_Port' or 6005
+      -- local gd_cmd = vim.lsp.rpc.connect('127.0.0.1', tonumber(gd_port))
+      -- vim.lsp.enable 'gdscript'
 
       local servers = {
         -- clangd = {},
@@ -627,11 +627,11 @@ require('lazy').setup({
 
         -- godot
         -- 20260124 naming as 'gdscript' shows error package not found in mason-registry
-        gdtoolkit = {
-          cmd = gd_cmd,
-          filetypes = { 'gd', 'gdscript', 'gdscript3' },
-          root_markers = { 'project.godot', '.git' },
-        },
+        -- gdtoolkit = {
+        -- cmd = gd_cmd,
+        -- filetypes = { 'gd', 'gdscript', 'gdscript3' },
+        -- root_markers = { 'project.godot', '.git' },
+        -- },
       }
 
       -- Ensure the servers and tools above are installed
@@ -875,7 +875,7 @@ require('lazy').setup({
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    main = 'nvim-treesitter',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       -- treesitter parsers
@@ -891,7 +891,7 @@ require('lazy').setup({
         'query',
         'vim',
         'vimdoc',
-        'gdscript',
+        -- 'gdscript',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
