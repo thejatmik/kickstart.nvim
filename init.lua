@@ -327,6 +327,13 @@ require('lazy').setup({
               ['<C-p>'] = action_layout.toggle_preview,
             },
           },
+          layout_strategy = 'vertical',
+          layout_config = {
+            vertical = {
+              prompt_position = 'top',
+              mirror = true,
+            },
+          },
         },
         extensions = {
           ['ui-select'] = {
