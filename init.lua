@@ -208,6 +208,7 @@ require('lazy').setup({
           ['softtabstop'] = 'detected',
           ['shiftwidth'] = 'detected',
         },
+        disable = true,
       }
     end,
   },
@@ -1268,3 +1269,12 @@ vim.o.colorcolumn = '+1'
 
 -- LE remap c-^
 vim.keymap.set('n', '<C-i>', '<C-^>', { desc = 'To previous buffer' })
+
+-- LE single status bar
+vim.opt.laststatus = 3
+
+-- LE tab size space 2
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
