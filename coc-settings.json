@@ -5,7 +5,10 @@
   "diagnostic.virtualTextPrefix": " ",
   "diagnostic.virtualTextLimitInOneLine": 1,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
-  "rpc.enabled": true,
+  "eslint.packageManager": "yarn",
+  "eslint.problems.shortenToSingleLine": true,
+  "eslint.quiet": true,
+  "rpc.enabled": false,
   "rpc.checkIdle": true,
   "rpc.detailsEditing": "stacking neutral creeps",
   "rpc.lowerDetailsEditing": "LH / DN : {current_line} / {total_lines}",
@@ -18,5 +21,9 @@
   "rpc.suppressNotifications": false,
   "rpc.idleTimeout": 45,
   "rpc.idleText": "Ganking Mid Lane",
-  "rpc.smallImage": "Dota 6.67b"
+  "rpc.smallImage": "Dota 6.67b",
+  "json.schemaDownload.trustedDomains": {
+    "https://www.schemastore.org": true,
+    "https://json.schemastore.org": true
+  }
 }
